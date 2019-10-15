@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">flixnet</string>
+
+    <string name="app_name" translatable="false">FlixNet</string>
+    <string name="hint_email" translatable="false">E-mail</string>
+    <string name="hint_password">Password</string>
+    <string name="label_login">Enter</string>
+    <string name="label_register">Register</string>
+    <string name="hint_nombre">Name</string>
+    <string name="hint_apellidos">Subname</string>
+    <string name="hint_confiPassword">Password Confirmation</string>
+    <string name="label_OkRegister">Register</string>
+
+
+    <!--Nacionalidad-->
+
+    <string-array name="arr_paises">
+        <item>España</item>
+        <item>Francia</item>
+        <item>Reino Unido</item>
+    </string-array>
+    <string name="label_cancelar">Cancel</string>
+    <string name="label_ok" translatable="false">Ok!</string>
 </resources>

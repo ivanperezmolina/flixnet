@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!---->
+
+    <string name="hint_password">Contraseña</string>
+    <string name="label_login">Entrar</string>
+    <string name="label_register">Registro</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellidos">Apellidos</string>
+    <string name="hint_confiPassword">Confirme su contraseña</string>
+    <string name="label_OkRegister">Registrarse</string>
+    <string name="label_cancelar">Cancelar</string>
+
+</resources>

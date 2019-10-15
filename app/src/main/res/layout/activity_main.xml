@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,36 +7,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-   <EditText
-       android:id="@+id/usuarioText"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/passText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/loginBoton"
-            android:layout_width="wrap_content"
+    ​
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="343dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/flixnet_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    ​
+    <!-- campo EMAIL -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userNameLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        ​
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Entrar"/>
-
-        <Button
-            android:id="@+id/registroBoton"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:inputType="textEmailAddress" />
+        ​
+    </com.google.android.material.textfield.TextInputLayout>
+    ​
+    <!-- campo PASSWORD -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passWordLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        ​
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passWord"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Registrar"/>
-
-
-    </LinearLayout>
-
-
-</LinearLayout>
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword" />
+        ​
+    </com.google.android.material.textfield.TextInputLayout>
+    ​
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_login"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passWordLayout" />
+    ​
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+    ​
+</androidx.constraintlayout.widget.ConstraintLayout>
